@@ -16,13 +16,16 @@ class CodeBlock extends Component {
         this.props.fetchCode(code, workspace);
     }
     render() {
+        const ex = this.props.code;
         return(
             <div>
                 <BlocklyDrawer
                     className={this.props.index === 0 ? "exist" : "non-exist"}
                     tools={blocks}
-                    workspaceXML={this.props.code.length === 0 ? this.state.workspace : this.props.code[1]}
+                    workspaceXML={this.state.workspace}
                     onChange={(code,workspace) => {
+                        if(ex[0] !== "" && code === "")
+                            this.setState({ workspace });
                         if(code !== "")
                             this.onChangeState(code,workspace);
                     }}
