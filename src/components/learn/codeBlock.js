@@ -6,27 +6,23 @@ import { fetchCode } from '../../actions/codeFunction';
 import { blocks } from '../blocks/blocks';
 
 class CodeBlock extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            workspace: ''
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         workspace: ''
+    //     };
+    // }
     onChangeState(code, workspace) {
         this.props.fetchCode(code, workspace);
     }
     render() {
-        const ex = this.props.code;
         return(
             <div>
                 <BlocklyDrawer
                     className={this.props.index === 0 ? "exist" : "non-exist"}
                     tools={blocks}
-                    workspaceXML={this.state.workspace}
+                    workspaceXML={this.props.code.workspace}
                     onChange={(code,workspace) => {
-                        if(ex[0] !== "" && code === "")
-                            this.setState({ workspace });
-                        if(code !== "")
                             this.onChangeState(code,workspace);
                     }}
                     appearance = {{

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class CodeText extends Component {
     renderCode() {
         let count = 0;    
-        const codeString = `${this.props.code[0]}`;
+        const codeString = `${this.props.code.code}`;
         const codeSplited = codeString.split(';');
         return codeSplited.map((code) => {
             if(code !== ""){
