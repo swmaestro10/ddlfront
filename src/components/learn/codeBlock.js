@@ -14,7 +14,6 @@ class CodeBlock extends Component {
     }
     onChangeState(code, workspace) {
         this.props.fetchCode(code, workspace);
-        console.log(workspace);
     }
     render() {
         return(
@@ -22,14 +21,15 @@ class CodeBlock extends Component {
                 <BlocklyDrawer
                     className={this.props.index === 0 ? "exist" : "non-exist"}
                     tools={blocks}
-                    workspaceXML={this.state.workspace}
+                    workspaceXML={this.state.workspace === '' ? this.state.workspace : this.props.code[1]}
                     onChange={(code,workspace) => {
                         if(code !== "")
                             this.onChangeState(code,workspace);
                     }}
                     appearance = {{
                         categories : {
-                            Model : {colour : '50'},                                Data : { colour : '200' },
+                            Model : {colour : '50'},
+                            Data : { colour : '200' },
                             modelLayer : { colour : '150' },
                             Training : { colour : '100' },
                             Demo : { colour : '270' },
@@ -48,4 +48,10 @@ class CodeBlock extends Component {
     }
 }
 
-export default connect(null, { fetchCode })(CodeBlock);
+function mapStateToProps(state) {
+    return {
+        code: state.code
+    }
+}
+
+export default connect(mapStateToProps, { fetchCode })(CodeBlock);
