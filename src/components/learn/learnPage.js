@@ -17,8 +17,10 @@ class LearnPage extends Component {
         return(
             <div>
                 <Header />
-                <Tutorial index={id} />
-                <CodeBox />
+                <div className="learnpage">
+                    <Tutorial index={id} />
+                    <CodeBox />
+                </div>
             </div>
         );
     }

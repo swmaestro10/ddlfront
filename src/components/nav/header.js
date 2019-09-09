@@ -12,7 +12,10 @@ class Header extends Component {
             <div className="navigation">
             {
                 token
-                ? <Link className="atag" to="/main" onClick={this.onClickSignOut.bind(this)}> SIGN OUT </Link>
+                ? <div>
+                    <Link className="atag" to="/main"> LEARN </Link>
+                    <Link className="atag" to="/main" onClick={this.onClickSignOut.bind(this)}> SIGN OUT </Link>
+                </div>
                 : <Link className="atag" to="/signin"> SIGN IN </Link>
             } 
             </div>

@@ -5,13 +5,15 @@ import _ from 'lodash';
 import Course from './course';
 
 class CourseList extends Component {
+    componentDidMount() {
+        this.props.GetClassAll(this.props.user.token, "all")
+    }
     renderCourse() {
         return _.map(this.props.classAll, course => {
             return <Course key={course.id} info={course} />
         });
     }
     render() {
-        this.props.GetClassAll(this.props.user.token, "all")
         return (
             <div className="courselist">
                 {this.renderCourse()}

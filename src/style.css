@@ -5,6 +5,7 @@ body {
 .atag {
     text-decoration: none;
     color: white;
+    padding: 10px;
 }
 .atag:hover {
     color: yellow;
@@ -132,27 +133,42 @@ form > button {
     width: 220px;
     height: 340px;
     text-align: center;
-    color:white;
+    color: white;
 }
-.course > h3 {
+.box-title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: steelblue;
 }
-.course > h5 {
+.box-summary {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: steelblue;
 }
-.course > h6 {
+.box-knowledge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 100%;
-    height: 60px;
+    height: 100px;
     background-color: steelblue;
 }
 .inclass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     width: 100%;
     height: 60px;
@@ -162,4 +178,91 @@ form > button {
     text-decoration: none;
     color: white;
     font-size: 30px;
+}
+
+/* learnpage */
+.learnpage {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+}
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+.tutorial-title {
+    display: flex;
+    width : 100%;
+	height : 10vh;
+	color: white;
+	background-color : #2592B6;
+    justify-content: center;
+    align-items: center;
+}
+.tutorial-contents {
+    margin : 5%;
+	width : 90%;
+}
+.tutorial-contents > h4 {
+	margin : 0;
+	color : #1C83A5;
+	font-size :2rem;
+}
+.tutorial-progress {
+    display: flex;
+    width : 100%;
+	height : 100px;
+}
+.tutorial-button {
+    margin : 5%;
+	width: 40%;
+	height: 40px;
+	background-color : #FD7700;
+	text-align : center;
+	border-radius : 15px;
+	box-shadow : 1px 1px 1px 1px gray;
+}
+.tutorial-button:hover {
+    background-color : #FA5858;
+}
+.tutorial-button > p {
+	color : white;
+	padding : 4px;
+	margin : 0;
+	font-size : 1.3rem;
+}
+.none {
+    visibility: hidden !important;
+}
+
+/* codeBox */
+.codebox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.codenav {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 5vh;
+    background-color: #222;
+}
+.navunit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 4vh;
+    margin-left: 5px;
+    font-size: 18px;
+    background-color: #383732;
+    color: white;
+}
+.navunit:hover {
+    background-color: darkgray;
 }

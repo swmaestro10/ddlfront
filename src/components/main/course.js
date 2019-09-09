@@ -7,9 +7,15 @@ class Course extends Component {
         const link = "/learn/"+info.id;
         return(
             <div className="course">
-                <h3>{info.name}</h3>
-                <h5>{info.explain}</h5>
-                <h6>{info.knowledge}</h6>
+                <div className="box-title">
+                    <p>{info.name}</p>
+                </div>
+                <div className="box-summary">
+                    <p>{info.explain}</p>
+                </div>
+                <div className="box-knowledge">
+                    <p>{info.knowledge}</p>
+                </div>
                 <div className="inclass">
                     <Link to={link}> enter </Link>
                 </div>

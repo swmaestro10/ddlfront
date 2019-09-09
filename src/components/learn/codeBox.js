@@ -8,7 +8,7 @@ import CodeResult from './codeResult'
 class CodeBox extends Component {
     render() {
         return(
-            <div>
+            <div className="codebox">
                 <CodeNav />
                 <CodeBlock />
                 <CodeText />
