@@ -6,13 +6,23 @@ import CodeText from './codeText';
 import CodeResult from './codeResult'
 
 class CodeBox extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { index: 0 };
+    }
+    onChangeIndex(next) {
+        this.setState({ index: next });
+    }
     render() {
         return(
             <div className="codebox">
-                <CodeNav />
-                <CodeBlock />
-                <CodeText />
-                <CodeResult />
+                <CodeNav 
+                    index={this.state.index}
+                    onChangeIndex={(next) => this.onChangeIndex(next)}
+                />
+                <CodeBlock index={this.state.index} />
+                <CodeText index={this.state.index} />
+                <CodeResult index={this.state.index} />
             </div>
         );
     }

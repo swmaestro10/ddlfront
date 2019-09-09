@@ -266,3 +266,31 @@ form > button {
 .navunit:hover {
     background-color: darkgray;
 }
+.navspan {
+    background: #222 !important;
+}
+
+/* codeblock */
+.exist {
+    width: 100%;
+    height: 85vh;
+}
+.non-exist {
+    display: none;
+}
+.code-text {
+    width: 100%;
+    height: 100%;
+    background-color: #383732;
+    overflow-y: scroll;
+}
+.code-text ul {
+    padding: 20px;
+    margin: 0px;
+}
+.code {
+    list-style: none;
+    padding-left: 10px;
+    font-size: 1rem;
+    color: white;
+}
