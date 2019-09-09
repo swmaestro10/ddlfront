@@ -21,7 +21,7 @@ class CodeBlock extends Component {
                 <BlocklyDrawer
                     className={this.props.index === 0 ? "exist" : "non-exist"}
                     tools={blocks}
-                    workspaceXML={this.props.code.workspace}
+                    // workspaceXML={this.props.code.workspace}
                     onChange={(code,workspace) => {
                             this.onChangeState(code,workspace);
                     }}
