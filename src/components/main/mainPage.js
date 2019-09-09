@@ -8,7 +8,7 @@ import CourseList from './courseList';
 class MainPage extends Component {
     onCheckUser(token) {
         return (
-            <div>
+            <div className="mainpage">
                 {token
                     ? <CourseList />
                     : <Introduction />

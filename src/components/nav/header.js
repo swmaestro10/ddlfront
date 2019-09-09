@@ -9,11 +9,11 @@ class Header extends Component {
     }
     onCheckUser(token) {
         return (
-            <div>
+            <div className="navigation">
             {
                 token
-                ? <Link to="/main" onClick={this.onClickSignOut.bind(this)}> SIGN OUT </Link>
-                : <Link to="/signin"> SIGN IN </Link>
+                ? <Link className="atag" to="/main" onClick={this.onClickSignOut.bind(this)}> SIGN OUT </Link>
+                : <Link className="atag" to="/signin"> SIGN IN </Link>
             } 
             </div>
         );
@@ -24,7 +24,10 @@ class Header extends Component {
              this.props.userInfo(token);
         }
         return(
-            <div>
+            <div className="header">
+                <div className="logo">
+                    <h1>뚝딱러닝</h1>
+                </div>
                 {this.onCheckUser(token)}
             </div>
         );

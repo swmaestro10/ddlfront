@@ -9,10 +9,11 @@ class SignUpForm extends Component {
         return(
             <div>
                 <input 
+                    className="blank"
                     type={field.label}
                     {...field.input}
+                    placeholder={field.meta.error}
                 />
-                {field.meta.error}
             </div>
         );
     }
@@ -40,7 +41,7 @@ class SignUpForm extends Component {
                     label="password"
                     component={this.renderField}
                 />
-                <button type="submit">SIGN UP</button>
+                <button className="blank" type="submit">SIGN UP</button>
             </form>
         );
     }

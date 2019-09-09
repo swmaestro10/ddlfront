@@ -1,0 +1,165 @@
+body {
+    margin: 0%;
+    background-color: steelblue;
+}
+.atag {
+    text-decoration: none;
+    color: white;
+}
+.atag:hover {
+    color: yellow;
+    font-size: 102%;
+}
+
+/* header */
+.header {
+    display: flex;
+    width: 100%;
+    height: 68px;
+    background-color: #00B7EF;
+}
+.logo {
+    display: inline-flex;
+    padding-left: 20px;
+    width: 50%;
+    color: white;
+    align-items: center;
+}
+.navigation {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    width: 50%;
+    align-items: center;
+}
+
+/* mainpage */
+.mainpage {
+    display: flex;
+    width: 100%;
+    background-color: ghostwhite;
+}
+.introduction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.welcome {
+    display: flex;
+    flex-direction: column;
+    background-color: steelblue;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: white;
+    height: 50vh;
+    margin: 0;
+}
+.explain {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+}
+.explainUnit {
+    width: 22%;
+    text-align: center;
+}
+.explainSubscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    background-color: silver;
+}
+
+/* sign */
+.signin, .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-color: steelblue;
+}
+.signbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+}
+.signup > .signbox {
+    height: 450px !important;
+}
+.signbox > h1 {
+    margin: 30px;
+}
+.signbox a {
+    text-decoration: none;
+}
+.blank {
+    font-size: 20px;
+    margin : 10px;
+    width: 400px;
+    height: 50px;
+    border: none;
+    text-indent: 20px;
+    background-color: ghostwhite;
+}
+form > button {
+    background-color: steelblue !important;
+    color: white;
+}
+
+/* course */
+.courselist {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    background-color: ghostwhite;
+    padding : 50px;
+}
+.course {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 220px;
+    height: 340px;
+    text-align: center;
+    color:white;
+}
+.course > h3 {
+    margin: 0;
+    width: 100%;
+    height: 110px;
+    background-color: steelblue;
+}
+.course > h5 {
+    margin: 0;
+    width: 100%;
+    height: 110px;
+    background-color: steelblue;
+}
+.course > h6 {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: steelblue;
+}
+.inclass {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: darkorange;
+}
+.inclass a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}

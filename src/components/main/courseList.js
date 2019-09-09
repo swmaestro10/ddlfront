@@ -13,10 +13,7 @@ class CourseList extends Component {
     render() {
         this.props.GetClassAll(this.props.user.token, "all")
         return (
-            <div>
-                <div>
-                    CoursePage
-                </div>
+            <div className="courselist">
                 {this.renderCourse()}
             </div>
         );

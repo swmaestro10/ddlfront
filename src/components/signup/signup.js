@@ -5,9 +5,12 @@ import SignUpForm from './signupForm';
 class SignUp extends Component {
     render(){
         return(
-            <div>
-                <SignUpForm />
-                <Link to="/signin">back</Link>
+            <div className="signup">
+                <div className="signbox">
+                    <h1>Register</h1>
+                    <SignUpForm />
+                    <Link to="/signin">back</Link>
+                </div>
             </div>
         );
     }

@@ -8,11 +8,12 @@ class SignInForm extends Component {
     renderField(field) {
         return(
             <div>
-                <input 
+                <input
+                    className="blank" 
                     type={field.label}
                     {...field.input}
+                    placeholder={field.meta.error}
                 />
-                {field.meta.error}
             </div>
         );
     }
@@ -25,7 +26,7 @@ class SignInForm extends Component {
         const { handleSubmit } = this.props;
         return(
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                <Field 
+                <Field
                     name="email"
                     label="email"
                     component={this.renderField}
@@ -35,7 +36,7 @@ class SignInForm extends Component {
                     label="password"
                     component={this.renderField}
                 />
-                <button type="submit">SIGN IN</button>
+                <button className="blank" type="submit">SIGN IN</button>
             </form>       
         );
     }
