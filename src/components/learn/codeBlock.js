@@ -14,9 +14,7 @@ class CodeBlock extends Component {
     }
     onChangeState(code, workspace) {
         this.props.fetchCode(code, workspace);
-        this.setState({
-            workspace
-        })
+        this.setState({ workspace });
     }
     render() {
         return(
@@ -26,7 +24,8 @@ class CodeBlock extends Component {
                     tools={blocks}
                     workspaceXML={this.state.workspace}
                     onChange={(code,workspace) => {
-                        this.onChangeState(code,workspace);
+                        if(code !== "")
+                            this.onChangeState(code,workspace);
                     }}
                     appearance = {{
                         categories : {

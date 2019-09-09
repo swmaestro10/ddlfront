@@ -11,7 +11,17 @@ class CodeBox extends Component {
         this.state = { index: 0 };
     }
     onChangeIndex(next) {
-        this.setState({ index: next });
+        this.setState({ 
+            ...this.state,
+            index: next 
+        });
+    }
+    setWorkSpace(code,workspace) {
+        this.setState({ 
+            ...this.state,
+            code: code,
+            workspace: workspace
+        });
     }
     render() {
         return(
@@ -20,7 +30,10 @@ class CodeBox extends Component {
                     index={this.state.index}
                     onChangeIndex={(next) => this.onChangeIndex(next)}
                 />
-                <CodeBlock index={this.state.index} />
+                <CodeBlock 
+                    index={this.state.index} 
+                    setWorkSpace={(code, workspace) => this.setWorkSpace(code, workspace)}    
+                />
                 <CodeText index={this.state.index} />
                 <CodeResult index={this.state.index} />
             </div>
