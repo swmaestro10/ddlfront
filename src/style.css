@@ -190,7 +190,7 @@ form > button {
 .tutorial {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
     height: 100%;
 }
 .tutorial-title {
@@ -242,7 +242,7 @@ form > button {
 .codebox {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     height: 100%;
 }
 .codenav {
