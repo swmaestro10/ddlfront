@@ -14,6 +14,9 @@ class CodeBlock extends Component {
     }
     onChangeState(code, workspace) {
         this.props.fetchCode(code, workspace);
+        this.setState({
+            workspace
+        })
     }
     render() {
         return(
