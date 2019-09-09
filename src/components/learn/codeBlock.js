@@ -6,12 +6,12 @@ import { fetchCode } from '../../actions/codeFunction';
 import { blocks } from '../blocks/blocks';
 
 class CodeBlock extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         workspace: ''
-    //     };
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            workspace: ''
+        };
+    }
     onChangeState(code, workspace) {
         this.props.fetchCode(code, workspace);
     }
