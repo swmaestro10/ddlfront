@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { GetClass } from '../../actions/classFunction';
+import { submitCode } from '../../actions/codeFunction';
 
 class Tutorial extends Component {
     constructor(props) {
@@ -15,10 +16,16 @@ class Tutorial extends Component {
         }
     }
     pageUp() {
-        this.setState({ page: this.state.page + 1})
+        this.setState({ page: this.state.page + 1});
     }
     pageDown() {
-        this.setState({ page: this.state.page - 1 })
+        this.setState({ page: this.state.page - 1 });
+    }
+    onSubmitCode() {
+        let code = this.props.code.code;
+        let token = this.props.user.token;
+        let id = this.props.id; 
+        this.props.submitCode(code, token, id);
     }
     render() {
         const ex = this.props.class;
@@ -43,7 +50,7 @@ class Tutorial extends Component {
                 </div>
                 <div className="tutorial-progress">
                     <div 
-                        className={index === 0 ? "tutorial-button none" : "tutorial-button"} 
+                        className={index === 0 ? "tutorial-button hidden" : "tutorial-button"} 
                         onClick={this.pageDown.bind(this)}
                     >
                         <p>previous</p>
@@ -54,7 +61,14 @@ class Tutorial extends Component {
                     >
                         <p>next</p>
                     </div>
+                    <div
+                        className={index === length ? "tutorial-button":"tutorial-button none"} 
+                        onClick={this.onSubmitCode.bind(this)}
+                    >
+                        <p>submit</p>
+                    </div>
                 </div>
+
             </div>
         );
     }
@@ -63,8 +77,9 @@ class Tutorial extends Component {
 function mapStateToProps(state) {
     return {
         user: state.user,
-        class: state.class
+        class: state.class,
+        code: state.code
     }
 }
 
-export default connect(mapStateToProps, { GetClass })(Tutorial);
+export default connect(mapStateToProps, { GetClass, submitCode })(Tutorial);

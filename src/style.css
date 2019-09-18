@@ -232,9 +232,13 @@ form > button {
 	margin : 0;
 	font-size : 1.3rem;
 }
-.none {
+.hidden {
     visibility: hidden !important;
 }
+.none {
+    display: none !important;
+}
+
 
 /* codeBox */
 .codebox {
