@@ -17,11 +17,11 @@ class CodeBlock extends Component {
     }
     render() {
         return(
-            <div>
+            <div className="codeblock">
                 <BlocklyDrawer
                     className="codeblock"
                     tools={blocks}
-                    // workspaceXML={this.props.code.workspace}
+                    workspaceXML={this.state.workspace}
                     onChange={(code,workspace) => {
                             this.onChangeState(code,workspace);
                     }}
