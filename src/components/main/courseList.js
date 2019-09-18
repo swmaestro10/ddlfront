@@ -15,9 +15,9 @@ class CourseList extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="courselists">
+                <h2 className="category">가능한 수업</h2>
                 <div className="courselist">
-                    <h2 className="category">가능한 수업</h2>
                     {this.renderCourse()}
                 </div>
             </div>

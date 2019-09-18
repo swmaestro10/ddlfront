@@ -118,6 +118,11 @@ form > button {
 }
 
 /* course */
+.courselists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 .courselist {
     display: flex;
     justify-content: space-around;
