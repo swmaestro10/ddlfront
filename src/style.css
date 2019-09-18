@@ -248,7 +248,7 @@ form > button {
     align-items: flex-end;
     width: 100%;
     height: 5vh;
-    background-color: #00B7EF;
+    background-color: #DDDDDD;
 }
 .navunit {
     display: flex;
