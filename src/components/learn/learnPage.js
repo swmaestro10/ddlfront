@@ -13,11 +13,12 @@ class LearnPage extends Component {
         }   
     }
     render() {
+        const id = this.props.match.params.id;
         return(
             <div>
                 <Header />
                 <div className="learnpage">
-                    <CodeBox />
+                    <CodeBox id={id} />
                     <CodeBlock />
                 </div>
             </div>

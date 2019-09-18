@@ -8,7 +8,7 @@ class Tutorial extends Component {
         this.state = { page : 0 };
     }
     componentDidMount() {
-        const id = this.props.match.params.id;
+        const id = this.props.id;
         const token = this.props.user.token;
         if(token){
             this.props.GetClass(token, id);

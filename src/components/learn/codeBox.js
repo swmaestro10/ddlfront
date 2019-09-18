@@ -23,7 +23,7 @@ class CodeBox extends Component {
                     index={this.state.index}
                     onChangeIndex={(next) => this.onChangeIndex(next)}
                 />
-                <Tutorial index={this.state.index} />
+                <Tutorial index={this.state.index} id={this.props.id}/>
                 <CodeText index={this.state.index} />
                 <CodeResult index={this.state.index} />
             </div>
