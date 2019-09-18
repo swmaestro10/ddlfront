@@ -47,10 +47,4 @@ class CodeBlock extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        code: state.code
-    }
-}
-
 export default connect(null, { fetchCode })(CodeBlock);

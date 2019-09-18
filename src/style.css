@@ -248,6 +248,14 @@ form > button {
     align-items: flex-end;
     width: 100%;
     height: 5vh;
+}
+.nav_a {
+    background-color: #00B7EF;
+}
+.nav_b {
+    background-color: #222;
+}
+.nav_c {
     background-color: #222;
 }
 .navunit {
@@ -258,14 +266,19 @@ form > button {
     height: 4vh;
     margin-left: 5px;
     font-size: 18px;
-    background-color: #383732;
     color: white;
+}
+.unit_a {
+    background-color: #2592B6 !important;
+}
+.unit_b {
+    background-color: #383732 !important;
+}
+.unit_c {
+    background-color: #383732 !important;
 }
 .navunit:hover {
     background-color: darkgray;
-}
-.navspan {
-    background: #222 !important;
 }
 
 /* codeblock */
