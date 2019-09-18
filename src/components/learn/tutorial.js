@@ -8,10 +8,10 @@ class Tutorial extends Component {
         this.state = { page : 0 };
     }
     componentDidMount() {
-        const { index }= this.props;
+        const id = this.props.match.params.id;
         const token = this.props.user.token;
         if(token){
-            this.props.GetClass(token, index);
+            this.props.GetClass(token, id);
         }
     }
     pageUp() {
@@ -32,7 +32,7 @@ class Tutorial extends Component {
         const length = book.length - 1;
         const index = this.state.page;
         return(
-            <div className="tutorial">
+            <div className={this.props.index === 0 ? "tutorial exist" : "non-exist"}>
                 <div className="tutorial-title">
                     <h1>{ex.name}</h1>
                 </div>

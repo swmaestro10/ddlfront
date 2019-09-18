@@ -4,7 +4,7 @@ class CodeNav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            block: 0,
+            tutor: 0,
             termi: 1,
             resul: 2
         }
@@ -15,7 +15,7 @@ class CodeNav extends Component {
             <div className="codenav">
                 <div 
                     className={ex.index === 0 ? "navunit" : "navunit navspan"} 
-                    onClick={() => ex.onChangeIndex(this.state.block)}
+                    onClick={() => ex.onChangeIndex(this.state.tutor)}
                 >
                     <p>Block</p>
                 </div>

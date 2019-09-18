@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CodeNav from './codeNav';
-import CodeBlock from './codeBlock';
+import Tutorial from './tutorial';
 import CodeText from './codeText';
 import CodeResult from './codeResult'
 
@@ -23,7 +23,7 @@ class CodeBox extends Component {
                     index={this.state.index}
                     onChangeIndex={(next) => this.onChangeIndex(next)}
                 />
-                <CodeBlock index={this.state.index} />
+                <Tutorial index={this.state.index} />
                 <CodeText index={this.state.index} />
                 <CodeResult index={this.state.index} />
             </div>

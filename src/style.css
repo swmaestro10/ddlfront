@@ -190,8 +190,6 @@ form > button {
 .tutorial {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 100%;
 }
 .tutorial-title {
     display: flex;
@@ -242,7 +240,7 @@ form > button {
 .codebox {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 30%;
     height: 100%;
 }
 .codenav {
@@ -271,6 +269,10 @@ form > button {
 }
 
 /* codeblock */
+.codeblock {
+    width: 70%;
+    height: 90vh;
+}
 .exist {
     width: 100%;
     height: 85vh;

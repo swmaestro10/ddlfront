@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Header from '../nav/header';
-import Tutorial from './tutorial';
 import CodeBox from './codeBox';
+import CodeBlock from './codeBlock';
 
 class LearnPage extends Component {
     componentDidMount() {
@@ -13,13 +13,12 @@ class LearnPage extends Component {
         }   
     }
     render() {
-        const { id } = this.props.match.params;
         return(
             <div>
                 <Header />
                 <div className="learnpage">
-                    <Tutorial index={id} />
                     <CodeBox />
+                    <CodeBlock />
                 </div>
             </div>
         );

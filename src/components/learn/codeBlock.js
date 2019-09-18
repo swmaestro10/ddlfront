@@ -19,7 +19,7 @@ class CodeBlock extends Component {
         return(
             <div>
                 <BlocklyDrawer
-                    className={this.props.index === 0 ? "exist" : "non-exist"}
+                    className="codeblock"
                     tools={blocks}
                     // workspaceXML={this.props.code.workspace}
                     onChange={(code,workspace) => {
