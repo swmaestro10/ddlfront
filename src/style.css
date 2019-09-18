@@ -135,6 +135,10 @@ form > button {
     text-align: center;
     color: white;
 }
+.category {
+    margin-top: 40px;
+    border-bottom: thick solid #2592B6;
+}
 .box-title {
     font-size: 30px;
     font-weight: bold;

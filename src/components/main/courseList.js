@@ -15,8 +15,11 @@ class CourseList extends Component {
     }
     render() {
         return (
-            <div className="courselist">
-                {this.renderCourse()}
+            <div>
+                <h2 className="category">가능한 수업</h2>
+                <div className="courselist">
+                    {this.renderCourse()}
+                </div>
             </div>
         );
     }
