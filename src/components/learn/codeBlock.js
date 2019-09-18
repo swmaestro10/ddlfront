@@ -17,7 +17,7 @@ class CodeBlock extends Component {
     }
     render() {
         return(
-            <div className="codeblock">
+            <div className="codeblocks">
                 <BlocklyDrawer
                     className="codeblock"
                     tools={blocks}
@@ -53,4 +53,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { fetchCode })(CodeBlock);
+export default connect(null, { fetchCode })(CodeBlock);
