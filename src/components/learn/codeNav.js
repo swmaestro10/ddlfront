@@ -17,7 +17,7 @@ class CodeNav extends Component {
                     className={ex.index === 0 ? "navunit" : "navunit navspan"} 
                     onClick={() => ex.onChangeIndex(this.state.tutor)}
                 >
-                    <p>Block</p>
+                    <p>Tutorial</p>
                 </div>
                 <div 
                     className={ex.index === 1? "navunit" : "navunit navspan"}
