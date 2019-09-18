@@ -8,24 +8,11 @@ class CodeNav extends Component {
             termi: 1,
             resul: 2
         }
-        this.navColor = this.navColor.bind(this);
-    }
-    navColor(){
-        let color = this.props.index;
-        if(color === 0) {
-            return "navunit nav_a";
-        }
-        if(color === 1) {
-            return "navunit nav_b";
-        }
-        if(color === 2) {
-            return "navunit nav_c";
-        }
     }
     render() {
         const ex = this.props;
         return(
-            <div className={this.navColor()}>
+            <div className="codenav">
                 <div 
                     className={ex.index === 0 ? "navunit unit_a" : "navunit"} 
                     onClick={() => ex.onChangeIndex(this.state.tutor)}
