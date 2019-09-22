@@ -12,7 +12,10 @@ class LearnPage extends Component {
         const socket = socketIOClient("52.78.238.217:8800");
         if(!token){
             this.props.history.push('/signin');
-        }
+        };
+        socket.on('result', (message) => {
+            console.log(message);
+        });
     }
     render() {
         const id = this.props.match.params.id;
