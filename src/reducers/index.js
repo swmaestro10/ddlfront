@@ -5,13 +5,15 @@ import UserReducer from './userReducer';
 import ClassAllReducer from './classAllReducer';
 import ClassReducer from './classReducer';
 import CodeReducer from './codeReducer';
+import ResultReducer from './resultReducer';
 
 const rootReducer = combineReducers({
     form: formReducer,
     user: UserReducer,
     classAll: ClassAllReducer,
     class: ClassReducer,
-    code: CodeReducer
+    code: CodeReducer,
+    result: ResultReducer
 });
 
 export default rootReducer;
