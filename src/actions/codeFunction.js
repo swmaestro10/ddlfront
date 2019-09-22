@@ -23,9 +23,10 @@ export function submitCode(code, token, subclass) {
     //     .catch((response) => {
     //         console.log(response);
     //     });
-    const socket = socketIOClient("52.78.238.217:8800");
-    socket.on('submit',{"name":"hello"});
-    socket.emit('submit',{"name":"hello"});
+    if(!token){
+        const socket = socketIOClient("52.78.238.217:8800");
+        socket.emit('submit',{"name":"hello"});
+    }
     return {
         type: SUBMIT_CODE,
         payload: 1
