@@ -16,10 +16,10 @@ class Tutorial extends Component {
         if(token){
             this.props.GetClass(token, id);
         }
-        socket.on('result', (message) => {
-            console.log("1");
-            this.props.submitCode(message);
-        });
+        // socket.on('result', (message) => {
+        //     console.log("1");
+        //     this.props.submitCode(message);
+        // });
     }
     pageUp() {
         this.setState({ page: this.state.page + 1 });
@@ -33,6 +33,10 @@ class Tutorial extends Component {
         let token = this.props.user.token;
         let subclass = this.props.id; 
         socket.emit('submit',{ code, token, subclass});
+        socket.on('result', (message) => {
+            console.log("1");
+            this.props.submitCode(message);
+        });
     }
     render() {
         const ex = this.props.class;
