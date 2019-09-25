@@ -7,7 +7,7 @@ class CodeResult extends Component {
         return(
             <div className={this.props.index === 2 ? "exist" : "non-exist"}>
                 <div className="coderesult">
-                    {this.props.result}
+                    {this.props.result ? this.props.result[0]:"preparing"}
                 </div>
             </div>
         );
