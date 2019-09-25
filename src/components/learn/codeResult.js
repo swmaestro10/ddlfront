@@ -16,6 +16,7 @@ class CodeResult extends Component {
             <div className={this.props.index === 2 ? "exist" : "non-exist"}>
                 <div className="code-text">
                     <ul>
+                        {this.props.result.length};
                         {/* {this.renderCode()} */}
                     </ul>
                 </div>
