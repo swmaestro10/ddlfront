@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import Result from './result';
 
 class CodeResult extends Component {
     render() {
         return(
-            <div className="coderesult">
-                <Result />
+            <div className={this.props.index === 2 ? "exist" : "non-exist"}>
+                <div className="coderesult">
+                    {this.props.result}
+                </div>
             </div>
         );
     }
 }
 
-export default CodeResult;
+function mapStateToProps(state) {
+    return {
+        result: state.result
+    }
+}
+
+export default connect(mapStateToProps)(CodeResult);
