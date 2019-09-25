@@ -17,6 +17,7 @@ class Tutorial extends Component {
             this.props.GetClass(token, id);
         }
         socket.on('result', (message) => {
+            console.log(message);
             this.props.submitCode(message);
         });
     }
