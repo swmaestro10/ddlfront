@@ -322,3 +322,19 @@ form > button {
     font-size: 1rem;
     color: white;
 }
+
+/* coderesult */
+.coderesult {
+    background-color: #383732;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.result {
+    background-color: azure;
+    width: 100%;
+    
+}
