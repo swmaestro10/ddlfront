@@ -9,7 +9,6 @@ export function fetchCode(code, workspace) {
 }
 
 export function submitCode(message) {
-    console.log("2");
     return {
         type: SUBMIT_CODE,
         payload: message

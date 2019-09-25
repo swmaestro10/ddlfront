@@ -12,14 +12,9 @@ class Tutorial extends Component {
     componentDidMount() {
         const id = this.props.id;
         const token = this.props.user.token;
-        const socket = socketIOClient("52.78.238.217:8800");
         if(token){
             this.props.GetClass(token, id);
         }
-        // socket.on('result', (message) => {
-        //     console.log("1");
-        //     this.props.submitCode(message);
-        // });
     }
     pageUp() {
         this.setState({ page: this.state.page + 1 });
@@ -34,7 +29,6 @@ class Tutorial extends Component {
         let subclass = this.props.id; 
         socket.emit('submit',{ code, token, subclass});
         socket.on('result', (message) => {
-            console.log("1");
             this.props.submitCode(message);
         });
     }
