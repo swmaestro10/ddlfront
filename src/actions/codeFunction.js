@@ -1,5 +1,3 @@
-import socketIOClient from 'socket.io-client';
-
 export const FETCH_CODE = 'fetch_code';
 export const SUBMIT_CODE = 'submit_code';
 
@@ -10,13 +8,9 @@ export function fetchCode(code, workspace) {
     }
 }
 
-export function submitCode(code, token, subclass) {
-    const socket = socketIOClient("52.78.238.217:8800");
-    socket.emit('submit',{ code, token, subclass});
-    socket.on('result', (message) => {
-        return {
-            type: SUBMIT_CODE,
-            payload: message
-        }
-    });
+export function submitCode(message) {
+    return {
+        type: SUBMIT_CODE,
+        payload: message
+    }
 }

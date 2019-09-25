@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import socketIOClient from 'socket.io-client';
 import { connect } from 'react-redux';
 import { GetClass } from '../../actions/classFunction';
 import { submitCode } from '../../actions/codeFunction';
@@ -22,10 +23,15 @@ class Tutorial extends Component {
         this.setState({ page: this.state.page - 1 });
     }
     onSubmitCode() {
+        const socket = socketIOClient("52.78.238.217:8800");
         let code = this.props.code.code;
         let token = this.props.user.token;
-        let id = this.props.id; 
-        this.props.submitCode(code, token, id);
+        let subclass = this.props.id; 
+
+        socket.emit('submit',{ code, token, subclass});
+        socket.on('result', (message) => {
+            this.props.submitCode(message);
+        });
     }
     render() {
         const ex = this.props.class;

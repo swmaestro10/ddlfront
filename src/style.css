@@ -328,7 +328,6 @@ form > button {
     background-color: #383732;
     display: flex;
     flex-direction: column;
-    padding: 5px;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -336,5 +335,5 @@ form > button {
 .result {
     background-color: azure;
     width: 100%;
-    
+
 }
