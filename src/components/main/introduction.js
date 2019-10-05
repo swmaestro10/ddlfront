@@ -94,7 +94,7 @@ class Introduction extends Component {
             // </div>
             <div>
                 <input type="file" name="file" onChange={e => this.handleFileInput(e)}/>
-                <img src={this.state.selectedFile} alt="none" />
+                <img src={this.state.selectedFile[0]} alt="none" />
                 <button type="button" onClick={this.handlePost()}>업로드</button>
             </div>
         );
