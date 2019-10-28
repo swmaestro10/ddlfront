@@ -1,340 +1,362 @@
 body {
-    margin: 0%;
-    background-color: steelblue;
+  margin: 0%;
+  background-color: steelblue;
 }
 .atag {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 .atag:hover {
-    color: yellow;
-    font-size: 102%;
+  color: yellow;
+  font-size: 102%;
 }
 
 /* header */
 .header {
-    display: flex;
-    width: 100%;
-    height: 68px;
-    background-color: #00B7EF;
+  display: flex;
+  width: 100%;
+  height: 68px;
+  background-color: #00b7ef;
 }
 .logo {
-    display: inline-flex;
-    padding-left: 20px;
-    width: 50%;
-    color: white;
-    align-items: center;
+  display: inline-flex;
+  padding-left: 20px;
+  width: 50%;
+  color: white;
+  align-items: center;
 }
 .navigation {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    padding-right: 20px;
-    width: 50%;
-    align-items: center;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  padding-right: 20px;
+  width: 50%;
+  align-items: center;
 }
 
 /* mainpage */
 .mainpage {
-    display: flex;
-    width: 100%;
-    background-color: ghostwhite;
+  display: flex;
+  width: 100%;
+  background-color: ghostwhite;
 }
 .introduction {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .welcome {
-    display: flex;
-    flex-direction: column;
-    background-color: steelblue;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    color: white;
-    height: 50vh;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: steelblue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: white;
+  height: 50vh;
+  margin: 0;
 }
 .explain {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 50vh;
 }
 .explainUnit {
-    width: 22%;
-    text-align: center;
+  width: 22%;
+  text-align: center;
 }
 .explainSubscribe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20vh;
-    background-color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  background-color: silver;
 }
 
 /* sign */
-.signin, .signup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    background-color: steelblue;
+.signin,
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: steelblue;
 }
 .signbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    width: 600px;
-    height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 600px;
+  height: 400px;
 }
 .signup > .signbox {
-    height: 450px !important;
+  height: 450px !important;
 }
 .signbox > h1 {
-    margin: 30px;
+  margin: 30px;
 }
 .signbox a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .blank {
-    font-size: 20px;
-    margin : 10px;
-    width: 400px;
-    height: 50px;
-    border: none;
-    text-indent: 20px;
-    background-color: ghostwhite;
+  font-size: 20px;
+  margin: 10px;
+  width: 400px;
+  height: 50px;
+  border: none;
+  text-indent: 20px;
+  background-color: ghostwhite;
 }
 form > button {
-    background-color: steelblue !important;
-    color: white;
+  background-color: steelblue !important;
+  color: white;
 }
 
 /* course */
 .courselists {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 .courselist {
-    display: flex;
-    justify-content: space-around;
-    height: 100vh;
-    background-color: ghostwhite;
-    padding : 50px;
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  background-color: ghostwhite;
+  padding: 50px;
 }
 .course {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    width: 220px;
-    height: 340px;
-    text-align: center;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 220px;
+  height: 340px;
+  text-align: center;
+  color: white;
 }
 .category {
-    margin: 50px;
-    text-indent: 10px;
-    font-size: 2rem;
-    padding: 10px;
-    border-bottom: thick solid #2592B6;
+  margin: 50px;
+  text-indent: 10px;
+  font-size: 2rem;
+  padding: 10px;
+  border-bottom: thick solid #2592b6;
 }
 .box-title {
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 100px;
-    background-color: steelblue;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background-color: steelblue;
 }
 .box-summary {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 100px;
-    background-color: steelblue;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background-color: steelblue;
 }
 .box-knowledge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 100px;
-    background-color: steelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background-color: steelblue;
 }
 .inclass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 60px;
-    background-color: darkorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: darkorange;
 }
 .inclass a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
 }
 
 /* learnpage */
 .learnpage {
-    display: flex;
-    width: 100%;
-    height: 90vh;
-    background-color: white;
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  background-color: white;
 }
 .tutorial {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .tutorial-title {
-    display: flex;
-    width : 100%;
-	height : 10vh;
-	color: white;
-	background-color : #2592B6;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  background-color: #2592b6;
+  justify-content: center;
+  align-items: center;
 }
 .tutorial-contents {
-    margin : 5%;
-	width : 90%;
+  margin: 5%;
+  width: 90%;
 }
 .tutorial-contents > h4 {
-	margin : 0;
-	color : #1C83A5;
-	font-size :2rem;
+  margin: 0;
+  color: #1c83a5;
+  font-size: 2rem;
 }
 .tutorial-progress {
-    display: flex;
-    width : 100%;
-	height : 100px;
+  display: flex;
+  width: 100%;
+  height: 100px;
 }
 .tutorial-button {
-    margin : 5%;
-	width: 40%;
-	height: 40px;
-	background-color : #FD7700;
-	text-align : center;
-	border-radius : 15px;
-	box-shadow : 1px 1px 1px 1px gray;
+  margin: 5%;
+  width: 40%;
+  height: 40px;
+  background-color: #fd7700;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px gray;
 }
 .tutorial-button:hover {
-    background-color : #FA5858;
+  background-color: #fa5858;
 }
 .tutorial-button > p {
-	color : white;
-	padding : 4px;
-	margin : 0;
-	font-size : 1.3rem;
+  color: white;
+  padding: 4px;
+  margin: 0;
+  font-size: 1.3rem;
 }
 .hidden {
-    visibility: hidden !important;
+  visibility: hidden !important;
 }
 .none {
-    display: none !important;
+  display: none !important;
 }
-
 
 /* codeBox */
 .codebox {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
 }
 .codenav {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 5vh;
-    background-color: #DDDDDD;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 5vh;
+  background-color: #dddddd;
 }
 .navunit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 4vh;
-    margin-left: 5px;
-    font-size: 18px;
-    color: white;
-    background-color: #00B7EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 4vh;
+  margin-left: 5px;
+  font-size: 18px;
+  color: white;
+  background-color: #00b7ef;
 }
 .unit_a {
-    background-color: #2592B6 !important;
+  background-color: #2592b6 !important;
 }
 .unit_b {
-    background-color: #383732 !important;
+  background-color: #383732 !important;
 }
 .unit_c {
-    background-color: #383732 !important;
+  background-color: #383732 !important;
 }
 .navunit:hover {
-    background-color: darkgray;
+  background-color: darkgray;
 }
 
 /* codeblock */
 .codeblocks {
-    width: 70%;
-    height: 90vh;
+  width: 70%;
+  height: 90vh;
 }
 .codeblock {
-    width: 100%;
-    height: 90vh;
+  width: 100%;
+  height: 90vh;
 }
 .exist {
-    width: 100%;
-    height: 85vh;
+  width: 100%;
+  height: 85vh;
 }
 .non-exist {
-    display: none;
+  display: none;
 }
 .code-text {
-    width: 100%;
-    height: 100%;
-    background-color: #383732;
-    overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: #383732;
+  overflow-y: scroll;
 }
 .code-text ul {
-    padding: 20px;
-    margin: 0px;
+  padding: 20px;
+  margin: 0px;
 }
 .code {
-    list-style: none;
-    padding-left: 10px;
-    font-size: 1rem;
-    color: white;
+  list-style: none;
+  padding-left: 10px;
+  font-size: 1rem;
+  color: white;
 }
 
 /* coderesult */
 .coderesult {
-    background-color: #383732;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    color: white;
+  background-color: #383732;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  color: white;
 }
 .result {
-    background-color: azure;
-    width: 100%;
+  background-color: azure;
+  width: 100%;
+}
 
+/* img */
+.introduct {
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  width: 100%;
+  height: 90vh;
+}
+.interestBox {
+  display: flex;
+  justify-content: center;
+}
+.interestImg {
+  width: 400px;
+  height: 400px;
+  margin: 80px;
+  background-color: blue;
+}
+.pushButton {
+  display: flex;
+  justify-content: center;
 }
