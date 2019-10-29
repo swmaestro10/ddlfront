@@ -8,7 +8,6 @@ export function uploadFile(value) {
   const request = axios
     .post(`${ROOT_URL}/api/upload`, value)
     .then(response => {
-      console.log(response.data);
       return response.data;
     })
     .catch(response => {

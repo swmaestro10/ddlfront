@@ -339,24 +339,96 @@ form > button {
 }
 
 /* img */
+.introHead {
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0px 0px 40px 0px;
+}
+.introHead > h1 {
+  margin: 0px;
+}
 .introduct {
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
+  justify-content: center;
+  background-color: snow;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 .interestBox {
   display: flex;
   justify-content: center;
 }
 .interestImg {
-  width: 400px;
+  width: 500px;
   height: 400px;
-  margin: 80px;
-  background-color: blue;
+  margin: 0px 60px 0px 60px;
+  background-color: ghostwhite;
+  border: 3px dashed #2592b6;
 }
-.pushButton {
+.filebox {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+}
+.filebox input {
+  border: none;
+}
+.filebox label {
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #2592b6;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox label:hover {
+  background-color: #00b7ef;
+}
+
+.filebox label:active {
+  background-color: #00b7ef;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.filebox button {
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #2592b6;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.filebox button:hover {
+  background-color: #00b7ef;
+}
+
+.filebox button:active {
+  background-color: #00b7ef;
 }
