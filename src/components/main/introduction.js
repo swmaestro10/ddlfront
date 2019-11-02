@@ -1,25 +1,35 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { uploadFile } from "../../actions/fileFunction";
+import style1 from "../img/style1.jpg";
+import style2 from "../img/style2.jpg";
+import style3 from "../img/style3.jpg";
 
 class Introduction extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      imgStyle: "1",
       selectedFile: null,
       fileUrl: null
     };
   }
   handleFileInput(e) {
     this.setState({
+      ...this.state,
       selectedFile: e.target.files[0],
       fileUrl: URL.createObjectURL(e.target.files[0])
     });
   }
   handlePost() {
-    const formData = new FormData();
-    formData.append("file", this.state.selectedFile);
-    this.props.uploadFile(formData);
+    if (this.state.selectedFile !== null) {
+      const formData = new FormData();
+      formData.append("file", this.state.selectedFile);
+      formData.append("style", this.state.imgStyle);
+      this.props.uploadFile(formData);
+    } else {
+      alert("사진을 넣어주세요");
+    }
   }
   render() {
     return (
@@ -92,6 +102,38 @@ class Introduction extends Component {
           </div>
           <div className="interestBox">
             <img className="interestImg" src={this.state.fileUrl} alt="" />
+            <div className="styleBox">
+              <div
+                onClick={() => {
+                  this.setState({
+                    ...this.state,
+                    imgStyle: "1"
+                  });
+                }}
+              >
+                <img src={style1} alt="style1" className="imgStyle" />
+              </div>
+              <div
+                onClick={() => {
+                  this.setState({
+                    ...this.state,
+                    imgStyle: "2"
+                  });
+                }}
+              >
+                <img src={style2} alt="style2" className="imgStyle" />
+              </div>
+              <div
+                onClick={() => {
+                  this.setState({
+                    ...this.state,
+                    imgStyle: "3"
+                  });
+                }}
+              >
+                <img src={style3} alt="style3" className="imgStyle" />
+              </div>
+            </div>
             <img
               className="interestImg"
               src={`data:image/*;base64,${this.props.file}`}
@@ -99,7 +141,7 @@ class Introduction extends Component {
             />
           </div>
           <div className="filebox">
-            <label for="ex_file">파일 업로드</label>
+            <label htmlFor="ex_file">사진 불러오기</label>
             <input
               id="ex_file"
               type="file"
@@ -107,8 +149,9 @@ class Introduction extends Component {
               accept="image/*"
               onChange={e => this.handleFileInput(e)}
             />
+            <div className="IMstyle">화풍 {this.state.imgStyle}번</div>
             <button type="button" onClick={this.handlePost.bind(this)}>
-              스타일 변환
+              스타일 변환하기
             </button>
           </div>
         </div>

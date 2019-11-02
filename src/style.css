@@ -361,8 +361,8 @@ form > button {
   justify-content: center;
 }
 .interestImg {
-  width: 500px;
-  height: 400px;
+  width: 450px;
+  height: 350px;
   margin: 0px 60px 0px 60px;
   background-color: ghostwhite;
   border: 3px dashed #2592b6;
@@ -431,4 +431,32 @@ form > button {
 
 .filebox button:active {
   background-color: #00b7ef;
+}
+.styleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.imgStyle {
+  width: 130px;
+  height: 100px;
+  box-shadow: 1px 1px 1px 1px black;
+  cursor: pointer;
+}
+.imgStyle:active {
+  box-shadow: 0.5px 0.5px 0.5px 0.5px white;
+}
+.filebox .IMstyle {
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fd7700;
+  border: none;
+  border-radius: 0.25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
