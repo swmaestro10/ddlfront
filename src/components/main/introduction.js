@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withCookies } from "react-cookie";
 import { connect } from "react-redux";
 import { uploadFile } from "../../actions/fileFunction";
 import style1 from "../img/style1.jpg";
@@ -8,11 +9,13 @@ import style3 from "../img/style3.jpg";
 class Introduction extends Component {
   constructor(props) {
     super(props);
+    const { cookies } = this.props;
     this.state = {
       imgStyle: "1",
       selectedFile: null,
       fileUrl: null
     };
+    cookies.remove("token");
   }
   handleFileInput(e) {
     this.setState({
@@ -166,7 +169,9 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  { uploadFile }
-)(Introduction);
+export default withCookies(
+  connect(
+    mapStateToProps,
+    { uploadFile }
+  )(Introduction)
+);
