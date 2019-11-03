@@ -6,6 +6,8 @@ import style1 from "../img/style1.jpg";
 import style2 from "../img/style2.jpg";
 import style3 from "../img/style3.jpg";
 
+import CanvasDraw from "react-canvas-draw";
+
 class Introduction extends Component {
   constructor(props) {
     super(props);
@@ -157,6 +159,23 @@ class Introduction extends Component {
               스타일 변환하기
             </button>
           </div>
+        </div>
+        <div>
+          <CanvasDraw
+            ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
+            brushColor="#000"
+            brushRadius={8}
+            lazyRadius={1}
+            canvasWidth={400}
+            canvasHeight={400}
+          />
+          <button
+            onClick={() => {
+              this.saveableCanvas.clear();
+            }}
+          >
+            Clear
+          </button>
         </div>
       </div>
     );
