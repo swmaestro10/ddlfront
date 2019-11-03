@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "dom-to-image": "^2.6.0",
+    "html2canvas": "^1.0.0-rc.5",
     "libxmljs": "^0.19.7",
     "lodash": "^4.17.15",
     "node-blockly": "^1.2.2",
