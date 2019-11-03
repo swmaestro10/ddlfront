@@ -162,6 +162,7 @@ class Introduction extends Component {
         </div>
         <div>
           <CanvasDraw
+            className="my-node"
             ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
             brushColor="#000"
             brushRadius={8}
