@@ -289,10 +289,17 @@ form > button {
 .unit_c {
   background-color: #383732 !important;
 }
+.unit_d {
+  background-color: #383732 !important;
+}
 .navunit:hover {
   background-color: darkgray;
 }
-
+.ccccc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* codeblock */
 .codeblocks {
   width: 70%;
@@ -462,4 +469,28 @@ form > button {
   border-radius: 0.25em;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+
+.ccccc button {
+  margin: 0px 20px 0px 20px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #2592b6;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.ccccc button:hover {
+  background-color: #00b7ef;
+}
+
+.ccccc button:active {
+  background-color: #00b7ef;
 }

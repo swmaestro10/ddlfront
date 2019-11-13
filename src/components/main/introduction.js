@@ -10,9 +10,6 @@ import img_block from "../img/img_block.png";
 import img_model from "../img/img_model.png";
 import img_web from "../img/img_web.png";
 
-import CanvasDraw from "react-canvas-draw";
-import html2canvas from "html2canvas";
-
 class Introduction extends Component {
   constructor(props) {
     super(props);
@@ -136,33 +133,6 @@ class Introduction extends Component {
               스타일 변환하기
             </button>
           </div>
-        </div>
-        <div>
-          <CanvasDraw
-            className="my-node"
-            ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
-            brushColor="#000"
-            brushRadius={8}
-            lazyRadius={1}
-            canvasWidth={400}
-            canvasHeight={400}
-          />
-          <button
-            onClick={() => {
-              this.saveableCanvas.clear();
-            }}
-          >
-            Clear
-          </button>
-          <button
-            onClick={() => {
-              html2canvas(document.querySelector(".my-node")).then(canvas => {
-                document.body.appendChild(canvas);
-              });
-            }}
-          >
-            capture
-          </button>
         </div>
       </div>
     );
