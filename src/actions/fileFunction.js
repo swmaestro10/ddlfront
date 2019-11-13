@@ -18,3 +18,18 @@ export function uploadFile(value) {
     payload: request
   };
 }
+
+export function testFile(value) {
+  const request = axios
+    .post("http://54.180.21.170:8080/api/upload", value)
+    .then(response => {
+      return response.data;
+    })
+    .catch(response => {
+      console.log(response);
+    });
+  return {
+    type: UPLOAD_FILE,
+    payload: request
+  };
+}
