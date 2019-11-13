@@ -5,8 +5,13 @@ import { uploadFile } from "../../actions/fileFunction";
 import style1 from "../img/style1.jpg";
 import style2 from "../img/style2.jpg";
 import style3 from "../img/style3.jpg";
+import img_tuto from "../img/img_tuto.jpg";
+import img_block from "../img/img_block.png";
+import img_model from "../img/img_model.png";
+import img_web from "../img/img_web.png";
 
 import CanvasDraw from "react-canvas-draw";
+import html2canvas from "html2canvas";
 
 class Introduction extends Component {
   constructor(props) {
@@ -38,72 +43,44 @@ class Introduction extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="intro_h">
         <div className="introduction">
           <div className="welcome">
             <h1>DDUKDDAK-LEARNING</h1>
             <h2>
-              Learn new technologies using real enviornments!
+              딥러닝, 머신러닝을 손쉽게 경험해보세요.
               <br />
-              right in your browser
+              뚝딱러닝이 블록코딩으로 당신을 도와드립니다.
             </h2>
             <p>
-              Interactive Learning and Training Platform for Software Engineers
+              누구나 쉽고 재밌게 소프트웨어를 배울 수 있어요.
               <br />
-              Helping Developers Learn and Companies Increase Adoption
+              지금 바로 시작해보세요!
             </p>
           </div>
           <div className="explain">
             <div className="explainUnit">
-              <h3>
-                Learn & Discover the latest
-                <br />
-                technologies and tooling
-              </h3>
-              <p>
-                Empowering developers to learn the technologies such as
-                Kubernetes, Machine Learning and cloud platforms using
-                self-paced labs
-              </p>
+              <img src={img_tuto} alt="" width="200" height="200" />
+              <h4>머신러닝 기본 개념에 대한 튜토리얼을 제공 합니다.</h4>
             </div>
             <div className="explainUnit">
-              <h3>
-                Enable Users to Test Drive Your
-                <br />
-                Products Within Seconds
-              </h3>
-              <p>
-                Create consistent branded experiences to showcase your product
-                directly from the browser without any downloads or configuration
-              </p>
+              <img src={img_block} alt="" width="200" height="200" />
+              <h4>블록코딩으로 모델 학습에 대해 이해할 수 있습니다.</h4>
             </div>
             <div className="explainUnit">
-              <h3>
-                Streamline Training and
-                <br />
-                Workshop Delivery
-              </h3>
-              <p>
-                Encourage users to gain a deeper understanding with on-demand
-                and instructor-led training delivered via Katacoda
-              </p>
+              <img src={img_model} alt="" width="200" height="200" />
+              <h4>다양한 학습 모델을 체험할 수 있습니다.</h4>
+              <h4>학습기회를 제공합니다.</h4>
             </div>
             <div className="explainUnit">
-              <h3>
-                Self-Paced Interactive Learning
-                <br />
-                For Your Teams
-              </h3>
-              <p>
-                Share knowledge with customised content and labs to demonstrate
-                internal tooling, patterns and practices
-              </p>
+              <img src={img_web} alt="" width="200" height="200" />
+              <h4>웹 서비스를 통한 교육으로 부담없이 진행하실 수 있습니다.</h4>
             </div>
           </div>
         </div>
         <div className="introduct">
           <div className="introHead">
-            <h1>Style Transform</h1>
+            <h1>당신의 사진에 스타일을 입혀보세요!</h1>
           </div>
           <div className="interestBox">
             <img className="interestImg" src={this.state.fileUrl} alt="" />
@@ -177,6 +154,15 @@ class Introduction extends Component {
           >
             Clear
           </button>
+          <button
+            onClick={() => {
+              html2canvas(document.querySelector(".my-node")).then(canvas => {
+                document.body.appendChild(canvas);
+              });
+            }}
+          >
+            capture
+          </button>
         </div>
       </div>
     );
@@ -190,8 +176,5 @@ function mapStateToProps(state) {
 }
 
 export default withCookies(
-  connect(
-    mapStateToProps,
-    { uploadFile }
-  )(Introduction)
+  connect(mapStateToProps, { uploadFile })(Introduction)
 );

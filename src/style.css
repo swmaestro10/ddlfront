@@ -45,6 +45,9 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.intro_h {
+  width: 100%;
+}
 .welcome {
   display: flex;
   flex-direction: column;
