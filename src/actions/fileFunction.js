@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const UPLOAD_FILE = "upload_file";
+export const LOAD = "load";
 
 const ROOT_URL = "http://ddukddak.io/class";
 
@@ -31,5 +32,18 @@ export function testFile(value) {
   return {
     type: UPLOAD_FILE,
     payload: request
+  };
+}
+
+export function loading() {
+  return {
+    type: LOAD,
+    payload: 1
+  };
+}
+export function loading2() {
+  return {
+    type: LOAD,
+    payload: 0
   };
 }

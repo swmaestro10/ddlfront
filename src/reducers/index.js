@@ -7,6 +7,7 @@ import ClassReducer from "./classReducer";
 import CodeReducer from "./codeReducer";
 import FileReducer from "./fileReducer";
 import ResultReducer from "./resultReducer";
+import LoadingReducer from "./loadingReducer";
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   class: ClassReducer,
   code: CodeReducer,
   result: ResultReducer,
-  file: FileReducer
+  file: FileReducer,
+  load: LoadingReducer
 });
 
 export default rootReducer;

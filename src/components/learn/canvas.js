@@ -20,15 +20,26 @@ class Canvas extends Component {
               hideGrid="false"
               canvasWidth={500}
               canvasHeight={500}
+              saveData={localStorage.getItem("savedDrawing")}
             />
           </div>
           <div>
             <button
               onClick={() => {
+                localStorage.setItem(
+                  "savedDrawing",
+                  this.saveableCanvas.getSaveData()
+                );
+              }}
+            >
+              저장
+            </button>
+            <button
+              onClick={() => {
                 this.saveableCanvas.clear();
               }}
             >
-              지우기
+              지우기 {this.props.index}
             </button>
             <button
               onClick={() => {

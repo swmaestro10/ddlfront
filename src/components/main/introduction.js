@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withCookies } from "react-cookie";
 import { connect } from "react-redux";
-import { uploadFile } from "../../actions/fileFunction";
+import { uploadFile, loading, loading2 } from "../../actions/fileFunction";
 import style1 from "../img/style1.jpg";
 import style2 from "../img/style2.jpg";
 import style3 from "../img/style3.jpg";
@@ -9,6 +9,7 @@ import img_tuto from "../img/img_tuto.jpg";
 import img_block from "../img/img_block.png";
 import img_model from "../img/img_model.png";
 import img_web from "../img/img_web.png";
+import Load from "./load";
 
 class Introduction extends Component {
   constructor(props) {
@@ -34,11 +35,13 @@ class Introduction extends Component {
       formData.append("file", this.state.selectedFile);
       formData.append("style", this.state.imgStyle);
       this.props.uploadFile(formData);
+      this.props.loading();
     } else {
       alert("사진을 넣어주세요");
     }
   }
   render() {
+    const { load } = this.props;
     return (
       <div className="intro_h">
         <div className="introduction">
@@ -76,6 +79,7 @@ class Introduction extends Component {
           </div>
         </div>
         <div className="introduct">
+          {load ? <Load /> : null}
           <div className="introHead">
             <h1>당신의 사진에 스타일을 입혀보세요!</h1>
           </div>
@@ -141,10 +145,11 @@ class Introduction extends Component {
 
 function mapStateToProps(state) {
   return {
-    file: state.file
+    file: state.file,
+    load: state.load
   };
 }
 
 export default withCookies(
-  connect(mapStateToProps, { uploadFile })(Introduction)
+  connect(mapStateToProps, { uploadFile, loading, loading2 })(Introduction)
 );
