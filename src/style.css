@@ -511,15 +511,18 @@ form > button {
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
 }
-
-/* .tooltip span {
+.tooltip:hover {
+  cursor: pointer;
+  color: antiquewhite;
+}
+.tooltip div {
   z-index: 10;
   display: none;
 }
-.tooltip:hover span {
+.tooltip:hover div {
   display: block;
   position: absolute;
   color: #111;
-  border: 1px solid #f3c534;
-  background-color: #fefeb8;
-} */
+  border: none;
+  background-color: whitesmoke;
+}
