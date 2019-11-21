@@ -44,7 +44,7 @@ class Canvas extends Component {
             <button
               onClick={() => {
                 html2canvas(document.querySelector(".ddddd")).then(canvas => {
-                  let imgDataUrl = canvas.toDataURL("image/png");
+                  let imgDataUrl = canvas.toDataURL("image/jpeg");
 
                   let blobBin = atob(imgDataUrl.split(",")[1]);
                   let array = [];

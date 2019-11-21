@@ -22,7 +22,7 @@ export function uploadFile(value) {
 
 export function testFile(value) {
   const request = axios
-    .post("http://54.180.21.170:8080/api/upload", value)
+    .post(`${ROOT_URL}/sub/image/mnist`, value)
     .then(response => {
       return response.data;
     })

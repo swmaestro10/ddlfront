@@ -1,6 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 body {
   margin: 0%;
   background-color: steelblue;
+  font-family: "Noto Sans KR", sans-serif !important;
 }
 .atag {
   text-decoration: none;
@@ -139,10 +142,11 @@ form > button {
   display: flex;
   flex-direction: column;
   margin: 0;
-  width: 220px;
+  width: 500px;
   height: 340px;
   text-align: center;
   color: white;
+  box-shadow: 1px 1px 1px 1px darkcyan;
 }
 .category {
   margin: 50px;
@@ -159,7 +163,7 @@ form > button {
   align-items: center;
   margin: 0;
   width: 100%;
-  height: 100px;
+  height: 200px;
   background-color: steelblue;
 }
 .box-summary {
@@ -169,17 +173,21 @@ form > button {
   align-items: center;
   margin: 0;
   width: 100%;
-  height: 100px;
+  height: 40px;
   background-color: steelblue;
 }
 .box-knowledge {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  text-indent: 10px;
   margin: 0;
-  width: 100%;
-  height: 100px;
+  height: 40px;
   background-color: steelblue;
+  padding-right: 5px;
+}
+.box-knowledge img {
+  cursor: pointer;
 }
 .inclass {
   display: flex;
@@ -503,3 +511,15 @@ form > button {
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
 }
+
+/* .tooltip span {
+  z-index: 10;
+  display: none;
+}
+.tooltip:hover span {
+  display: block;
+  position: absolute;
+  color: #111;
+  border: 1px solid #f3c534;
+  background-color: #fefeb8;
+} */
