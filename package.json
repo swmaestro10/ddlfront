@@ -10,6 +10,7 @@
     "lodash": "^4.17.15",
     "node-blockly": "^1.2.2",
     "prop-types": "^15.7.2",
+    "rc-tooltip": "^4.0.0-alpha.3",
     "react": "^16.11.0",
     "react-blockly-drawer": "^1.6.6",
     "react-canvas-draw": "^1.0.2",
