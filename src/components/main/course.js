@@ -23,7 +23,7 @@ class Course extends Component {
         </div>
         <div className="box-summary">{/* <p>{info.explain}</p> */}</div>
         <div className="inclass">
-          <Link to={link}> enter </Link>
+          <Link to={link}> 학습하기 </Link>
         </div>
       </div>
     );

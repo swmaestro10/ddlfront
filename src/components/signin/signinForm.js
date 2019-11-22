@@ -29,7 +29,7 @@ class SignInForm extends Component {
         <Field name="email" label="email" component={this.renderField} />
         <Field name="pw" label="password" component={this.renderField} />
         <button className="blank" type="submit">
-          SIGN IN
+          로그인
         </button>
       </form>
     );

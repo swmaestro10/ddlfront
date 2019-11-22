@@ -30,7 +30,7 @@ class SignUpForm extends Component {
         <Field name="email" label="email" component={this.renderField} />
         <Field name="pw" label="password" component={this.renderField} />
         <button className="blank" type="submit">
-          SIGN UP
+          가입
         </button>
       </form>
     );
