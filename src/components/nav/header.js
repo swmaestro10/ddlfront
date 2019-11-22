@@ -14,7 +14,7 @@ class Header extends Component {
           <div>
             <Link className="atag" to="/main">
               {" "}
-              LEARN{" "}
+              학습공간{" "}
             </Link>
             <Link
               className="atag"
@@ -22,13 +22,13 @@ class Header extends Component {
               onClick={this.onClickSignOut.bind(this)}
             >
               {" "}
-              SIGN OUT{" "}
+              나가기{" "}
             </Link>
           </div>
         ) : (
           <Link className="atag" to="/signin">
             {" "}
-            SIGN IN{" "}
+            시작하기{" "}
           </Link>
         )}
       </div>
@@ -58,7 +58,4 @@ function mapStateToProps(state) {
   return { user: state.user };
 }
 
-export default connect(
-  mapStateToProps,
-  { signOut, userInfo }
-)(Header);
+export default connect(mapStateToProps, { signOut, userInfo })(Header);
